@@ -5,6 +5,9 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
+            <a href="/students/create" class="btn btn-primary">Add Data</a> 
+            <br><br>
+
                 <div class="card-header">{{ __('STUDENT DATA') }}</div>
 
                 <div class="card-body">
