@@ -146,5 +146,9 @@ class StudentController extends Controller
         return $pdf->stream(); 
     }
 
+    public function __construct()
+    {
+    $this->middleware('auth');
+    }
 
 }

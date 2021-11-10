@@ -59,8 +59,10 @@
                                     <a class="nav-link" href="http://127.0.0.1:8000/students">{{ __('CRUD') }}</a>
                             </li>
                             <li class="nav-item">
+                                @can('manage-users')
                                     <a class="nav-link" href="http://127.0.0.1:8000/users">{{ __('CRUD User') }}</a>
-                            </li>
+                                @endcan
+                                </li>
 
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -69,8 +71,8 @@
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                    onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
